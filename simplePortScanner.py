@@ -1,3 +1,6 @@
+
+
+
 import socket       # Socket-Bibliothek wird verwendet, um Netzwerkkommunikation zu ermöglichen Referenz: https://docs.python.org/3/library/socket.html
 import termcolor    # Termcolor-Bibliothek wird verwendet, um farbigen Text in der Konsole anzuzeigen
 
@@ -29,7 +32,7 @@ ports = int(input("[*] Wieviele Ports willst du scannen?  "))
 # ansonsten wird das einzelne Ziel gescannt
 if ',' in targets:
         print(termcolor.colored(("[*] Scanning Multiple Targets"), 'green'))
-        for ip_addr in targets.split(',')
+        for ip_addr in targets.split(','):
                 scan(ip_addr.strip(' '),ports)
 else: 
         scan(targets,ports)
